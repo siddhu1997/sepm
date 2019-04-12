@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black');
+    @import url('https://fonts.googleapis.com/css?family=Passion+One');
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+    div.h1-text {
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        padding-top: 0.4ch;
+        font-size: 2.5em;
+        text-align: center;
+    }
+    ul,li{
+        text-align: left;
+        font-family: 'Montserrat', sans-serif;
+        color:white;
+        font-size: 20px;
+        width:10%;
+        padding-top: 2ch;
+        height: 100%;
+        text-transform: none;
+
+    }
+    div.welcome{
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        font-size: 5em;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        padding-top: 3.3ch; 
+    }
+    button.bwelcome{
+        font-family: 'Montserrat', sans-serif;
+        width: 10%;
+        height: 5%;
+        font-size: 10px;
+        text-align: center;
+        color: black;
+    }
+    label{
+        text-align: center;
+        margin-left: 2ch;
+    }
+    a{
+        text-align: center;
+    }
+    input{
+        width: 80%;
+        text-align: center;
+    }
+    #aw1{
+        font-family: 'Montserrat', sans-serif;
+        text-align: left;
+        color: white;
+        font-size: 1em;
+        padding-left:0.5ch;
+    }
+    #temp {
+        background-color: #127aa3;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2317e0ff'/%3E%3Cstop offset='1' stop-color='%23127aa3'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23ffffff' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23ffffff' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+        background-attachment: fixed;
+        background-size: cover;
+        z-index: -1;
+    }
