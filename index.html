@@ -32,20 +32,19 @@
         <div class="row" style="height: 81%;" id="temp">
             <div class="col-md-4 col-sm-12"></div>
             <div class="col-md-4 col-sm-12">
-                <div class="welcome animated bounceInLeft">welcome!
-                </div>
+                <div class="welcome animated bounceInLeft">welcome</div>
                 <div id="ctreveal"
-                    style="display: none; box-align: center; width: 100%; height:80%; background-color: white; margin-top:3ch; border: 1px solid white; border-radius: 15px;">
-                    <h3 class="text-center">Log In</h3>
+                    style="display: none; box-align: center; width: 100%; height:80%; background-color: white; margin-top:3ch; border: 1px solid white; border-radius: 15px; margin-top: 3.3em;">
+                    <h3 class="text-center" style="padding-top: 0.7ch;">Log In</h3>
                     <form>
                         <div class="form-group input-group-sm">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input style="width: 90%; margin-left:2ch;" type="email" class="form-control"
+                            <input style="width: 90%; margin-left:2.3ch;" type="email" class="form-control"
                                 id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                         </div>
                         <div class="form-group input-group-sm">
                             <label for="exampleInputPassword1">Password</label>
-                            <input style="width: 90%; margin-left:2ch;" type="password" class="form-control"
+                            <input style="width: 90%; margin-left:2.3ch;" type="password" class="form-control"
                                 id="exampleInputPassword1" placeholder="Password">
                         </div>
                         <div style="width: inherit;" class="text-center">
@@ -72,8 +71,8 @@
     <!--============= jQuery==================================================-->
     <script>
         $(".welcome").click(function () {
-            $(".welcome").hide(200, function () {
-                $("#ctreveal").show();
+            $(".welcome").hide(500, function () {
+                $("#ctreveal").show(1111);
             });
         });
 
