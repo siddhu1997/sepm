@@ -1,0 +1,177 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<title>
+    Student Notifications
+</title>
+
+<head>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/dashbord.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="javascripts/popper.min.js"></script>
+    <script src="javascripts/bootstrap.min.js"></script>
+    <script src="javascripts/teachers_dashboard.js"></script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+
+</head>
+
+<style>
+    #snotifications {
+        background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMDAiPgo8cmVjdCB3aWR0aD0iNTYiIGhlaWdodD0iMTAwIiBmaWxsPSIjZmZmZiI+PC9yZWN0Pgo8cGF0aCBkPSJNMjggNjZMMCA1MEwwIDE2TDI4IDBMNTYgMTZMNTYgNTBMMjggNjZMMjggMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmNGY4ZmYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8cGF0aCBkPSJNMjggMEwyOCAzNEwwIDUwTDAgODRMMjggMTAwTDU2IDg0TDU2IDUwTDI4IDM0IiBmaWxsPSJub25lIiBzdHJva2U9IiNmNGY4ZmYiIHN0cm9rZS13aWR0aD0iMiI+PC9wYXRoPgo8L3N2Zz4=");
+    }
+</style>
+
+<body>
+    <div class="container" id="loaderbody" style="height: 100%; min-height:100%;">
+        <div class="row" style="height: 100%; min-height:100%;">
+            <div class="col-sm-12 text-center" style=" height: 100%; vertical-align: middle;">
+                <img src="Images/loader.svg" style="height: 20%; width:20%; position:absolute; top: 40%; left: 40%;" />
+            </div>
+        </div>
+        <script>
+            window.onload = function () {
+                window.setTimeout(function () {
+                    var i = 1.2;
+                    var t2;
+                    var t1 = setInterval(function () {
+                        if (i > 0) {
+                            document.getElementById("loaderbody").style.opacity = i;
+                            i = i - 0.1;
+                        }
+                        else {
+                            document.getElementById("loaderbody").style.opacity = 0;
+                            document.getElementById("loaderbody").style.display = "none";
+                            document.getElementById("bganimation").style.display = "block";
+                            clearInterval(t1);
+                            i = 0;
+                            t2 = setInterval(function () {
+                                if (i < 1) {
+                                    document.getElementById("#bganimation").style.opacity = i;
+                                    i = i + 0.1;
+                                }
+                                else {
+                                    document.getElementById("#bganimation").style.opacity = 1;
+                                    clearInterval(t2);
+                                }
+                            }, 30);
+                        }
+                    }, 30);
+                }, 50);
+            }
+        </script>
+    </div>
+    <div class="container-fluid" id="bganimation">
+        <div class="row" style="background-color:white; height: 12%;">
+            <!--- This is our header -->
+            <div class="col-sm-12" style="width: 100%">
+                <div class="h1-text">MITS PORTAL</div>
+            </div>
+        </div>
+        <div class="row" style="min-height: 81%;" id="snotifications">
+            <div class="col-md-4" style="width: 100%;">
+                <!----------------------------------nav start---------------------------->
+                <div class="wrapper" style="width:100%;">
+                    <!---------------- sidebar------------------------------------------------->
+                    <nav id="sidebar" style="width: 100%;">
+                        <div class="sidebar-wrapper">
+                            <div class="sidebar-header">
+                                <h3><i class="fa fa-tachometer" aria-hidden="true"></i>
+                                    Dashboard</h3>
+                            </div>
+
+                            <ul class="list-unstyled components">
+                                <li>
+                                    <a href="#"><i class="fa fa-users" aria-hidden="true"></i>
+                                        Attendance</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa fa-ticket" aria-hidden="true"> </i> Gate Pass
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                                        class="dropdown-toggle"><i class="fa fa-cog" aria-hidden="true"> </i> Account
+                                        Settings
+                                    </a>
+                                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                                        <li>
+                                            <a href="#">Phone number</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Picture</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Email id</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+
+                    <div id="content">
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <div class="container-fluid">
+
+                                <button type="button" id="sidebarCollapse" class="btn btn-info">
+                                    <<< </button>
+
+                            </div>
+                        </nav>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" id="testnotifications"
+                            class="btn btn-primary btn-lg"><i class="fa fa-refresh" aria-hidden="true"></i>
+                        </button>
+                    </div> <!-- userprofile -->
+
+
+
+                </div>
+            </div>
+            <div class="col-md-8" id="mypanel"></div>
+
+        </div>
+        <div class="row bg-dark " style="height: 7%">
+            <div class="col-sm-12 text-center text-white align-middle" style="font-size: 1ch; padding-top: 2.5ch;">
+                All rights Reserved.
+                <!-- This is our footer -->
+            </div>
+        </div>
+    </div>
+    <script>
+
+        $(function () {
+
+            $("#testnotifications").on('click', function () {
+
+                $.getJSON('http://time.jsontest.com', function (data) {
+
+                    var template = $("#test").html();
+                    var text = Mustache.render(template, data);
+
+                    $("#mypanel").html(text);
+                });
+            });
+        }); 
+    </script>
+    <script id="test" type="text/template">
+    <div class="card text-center">
+        <div class="card-header">
+          Featured
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Special title treatment</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+        <div class="card-footer text-muted">
+          {{ date }}
+        </div>
+      </div>
+</script>
+</body>
+
+</html>
