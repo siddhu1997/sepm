@@ -1,7 +1,7 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
 <title>
-    Template
+    Student Enrollment
 </title>
 
 <head>
@@ -14,12 +14,6 @@
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 </head>
-<style>
-#error{
-    background-image: url("Images/404.jpg");
-
-}
-</style>
 
 <body>
     <div class="container" id="loaderbody" style="height: 100%; min-height:100%;">
@@ -69,7 +63,46 @@
         </div>
 
         <div class="row" style="height:81%;" id="error">
-            &nbsp;
+            <form method="post" action="http://mitsportal.ml/enrollstudent">
+                <div class="imgcontainer">
+                  <img src="" alt="Avatar" class="avatar">
+                </div>
+               <p>All Fields are Required.</p>
+                <div class="container">
+                  <label for="stud_id"><b>Student ID</b></label>
+                  <input type="text" placeholder="Enter Student ID" name="stud_id" required>
+              
+                  <label for="name"><b>Name</b></label>
+                  <input type="text" placeholder="Enter Student Name" name="name" required>
+            
+                  <label for="dept"><b>Department</b></label>
+                  <input type="text" placeholder="Enter Department Name" name="dept" required>
+            
+                  <label for="stud_email"><b>Student e-mail </b></label>
+                  <input type="text" placeholder="Enter Student e-mail" name="stud_email" required>
+            
+                  <label for="stud_phno"><b>Student Phone Number</b></label>
+                  <input type="text" placeholder="Enter Student Phone Number" name="stud_phno" required>
+            
+                  <label for="parent_name"><b>Parent Name</b></label>
+                  <input type="text" placeholder="Enter Parent Name" name="parent_name" required>
+            
+                  <label for="parent_email"><b>Parent e-mail</b></label>
+                  <input type="text" placeholder="Enter Parent e-mail" name="parent_email" required>
+            
+                  <label for="parent_phno"><b>Parent Phone Number</b></label>
+                  <input type="text" placeholder="Enter Parent Phone Number" name="parent_phno" required>
+            
+              
+                  <button type="submit">Enroll</button>
+                  
+                </div>
+              
+                <div class="container" style="background-color:#f1f1f1">
+                  <button type="reset" class="cancelbtn">Reset all values</button>
+                  
+                </div>
+              </form>
         </div>
         <div class="row bg-dark " style="height: 7%">
             <div class="col-sm-12 text-center text-white align-middle" style="font-size: 1ch; padding-top: 2.5ch;">
